@@ -24,7 +24,7 @@ There is a patch bypass on Log4J v2.15.0 that allows a full RCE. There has been 
 
 # Description
 
-We have been researching the Log4J RCE (CVE-2021-44228) since it was released, and we worked in preventing this vulnerability with our customers. We are open-sourcing an open detection and scanning tool for discovering and fuzzing for Log4J RCE CVE-2021-44228 vulnerability. This shall be used by security teams to scan their infrastructure for Log4J RCE, and also test for WAF bypasses that can result in achiving code execution on the organization's environment.
+We have been researching the Log4J RCE (CVE-2021-44228) since it was released, and we worked in preventing this vulnerability. This is an Open Source detection and scanning tool for discovering and fuzzing for Log4J RCE CVE-2021-44228 vulnerability. This shall be used to scan infrastructure for Log4J RCE, and also test for WAF bypasses that can result in achiving code execution on the organization's environment.
 
 It supports DNS OOB callbacks out of the box, there is no need to setup a DNS callback server.
 
