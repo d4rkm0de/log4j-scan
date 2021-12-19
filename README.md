@@ -16,7 +16,7 @@
 ---
 # 🚨 Announcement
 
-There is a patch bypass on Log4J v2.15.0 that allows a full RCE. FullHunt added community support for log4j-scan to reliably detect CVE-2021-45046. If you're having difficulty discovering and scanning your infrastructure at scale or keeping up with the Log4J threat, please get in touch at (team@fullhunt.io).
+There is a patch bypass on Log4J v2.15.0 that allows a full RCE. There has been added community support for log4j-scan to reliably detect CVE-2021-45046. If you're having difficulty discovering and scanning your infrastructure at scale or keeping up with the Log4J threat, please get in touch at (info@redlinecybersecurity.com).
 
 ![](https://dkh9ehwkisc4.cloudfront.net/static/files/d385f9d8-e2b1-4d72-b9c2-a62c4c1c34a0-Screenshot-cve-2021-45046-demo.png)
 
