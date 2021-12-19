@@ -36,8 +36,6 @@ It supports DNS OOB callbacks out of the box, there is no need to setup a DNS ca
 ```python
 $ python3 log4j-scan.py -h
 [•] CVE-2021-44228 - Apache Log4j RCE Scanner
-[•] Scanner provided by FullHunt.io - The Next-Gen Attack Surface Management Platform.
-[•] Secure your External Attack Surface with FullHunt.io.
 usage: log4j-scan.py [-h] [-u URL] [-l USEDLIST] [--request-type REQUEST_TYPE] [--headers-file HEADERS_FILE] [--run-all-tests] [--exclude-user-agent-fuzzing]
                      [--wait-time WAIT_TIME] [--waf-bypass] [--dns-callback-provider DNS_CALLBACK_PROVIDER] [--custom-dns-callback-host CUSTOM_DNS_CALLBACK_HOST]
 
@@ -103,20 +101,17 @@ $ pip3 install -r requirements.txt
 # Docker Support
 
 ```shell
-git clone https://github.com/fullhunt/log4j-scan.git
+git clone https://github.com/d4rkm0de/log4j-scan.git
 cd log4j-scan
 sudo docker build -t log4j-scan .
 sudo docker run -it --rm log4j-scan
 
-# With URL list "urls.txt" in current directory
+# Linux With URL list "urls.txt" in current directory
 docker run -it --rm -v $PWD:/data log4j-scan -l /data/urls.txt
+
+# PowerShell With URL list "urls.txt" in current directory
+docker run -it --rm -v ${PWD}:/data log4j-scan -l /data/urls.txt
 ```
-
-# About FullHunt
-
-FullHunt is the next-generation attack surface management platform. FullHunt enables companies to discover all of their attack surfaces, monitor them for exposure, and continuously scan them for the latest security vulnerabilities. All, in a single platform, and more.
-
-FullHunt provides an enterprise platform for organizations. The FullHunt Enterprise Platform provides extended scanning and capabilities for customers. FullHunt Enterprise platform allows organizations to closely monitor their external attack surface, and get detailed alerts about every single change that happens. Organizations around the world use the FullHunt Enterprise Platform to solve their continuous security and external attack surface security challenges.
 
 # Legal Disclaimer
 This project is made for educational and ethical testing purposes only. Usage of log4j-scan for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program.
@@ -126,10 +121,7 @@ This project is made for educational and ethical testing purposes only. Usage of
 The project is licensed under MIT License.
 
 
-# Author
+# Original Author
 *Mazin Ahmed*
-* Email: *mazin at FullHunt.io*
-* FullHunt: [https://fullhunt.io](https://fullhunt.io)
 * Website: [https://mazinahmed.net](https://mazinahmed.net)
 * Twitter: [https://twitter.com/mazen160](https://twitter.com/mazen160)
-* Linkedin: [http://linkedin.com/in/infosecmazinahmed](http://linkedin.com/in/infosecmazinahmed)
